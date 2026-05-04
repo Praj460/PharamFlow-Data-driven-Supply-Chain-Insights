@@ -165,9 +165,9 @@ def train_price_model(df_engineered: pd.DataFrame):
 
     mae  = mean_absolute_error(y_test, preds)
     rmse = np.sqrt(mean_squared_error(y_test, preds))
-    mape = np.mean(np.abs((y_test - preds) / y_test.replace(0, np.nan))) * 100
+    
 
-    metrics = {"mae": mae, "rmse": rmse, "mape": mape, "n_train": split, "n_test": len(df) - split}
+    metrics = {"mae": mae, "rmse": rmse, "n_train": split, "n_test": len(df) - split}
 
     # Feature importance
     importance = dict(zip(FEATURE_COLS, model.feature_importances_))
