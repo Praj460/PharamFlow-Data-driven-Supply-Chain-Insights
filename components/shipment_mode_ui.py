@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 # Import cleaning function
-from utils.price_forecasting import clean_freight_cost_column_with_id_priority
+from utils.freight_utils import clean_freight_cost_column_with_id_priority
 
 def render_shipment_mode_tab(df):
     st.header("🚛 Shipment Mode Analysis")
