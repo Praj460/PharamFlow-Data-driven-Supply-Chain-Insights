@@ -2,7 +2,7 @@ import streamlit as st
 from components.chatbot_ui import render_chatbot_tab
 from components.forecast_ui import render_forecast_tab
 from components.visualization_ui import render_visualization_tab
-from components.price_forecasting_ui import render_price_forecasting_tab
+from components.price_forecasting_ui import render_price_prediction_tab
 from components.shipment_mode_ui import render_shipment_mode_tab
 from components.data_entry_ui import render_data_entry_tab
 from components.Freight_Cost_Analysis import render_freight_cost_tab
@@ -42,7 +42,7 @@ elif st.session_state.page == "visualization":
 
 elif st.session_state.page == "price":
     st.button("⬅️ Back to Home", on_click=go_home)
-    render_price_forecasting_tab(df)
+    render_price_prediction_tab(df)
 
 elif st.session_state.page == "shipment":
     st.button("⬅️ Back to Home", on_click=go_home)
