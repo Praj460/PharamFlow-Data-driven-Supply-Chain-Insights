@@ -118,12 +118,11 @@ def _display_results(
 
     # ── 1. Summary metrics ───────────────────────
     st.subheader("📊 Model Performance")
-    c1, c2, c3, c4, c5 = st.columns(5)
+    c1, c2, c3, c4 = st.columns(4)
     c1.metric("MAE",  f"${metrics['mae']:.3f}")
     c2.metric("RMSE", f"${metrics['rmse']:.3f}")
-    c3.metric("MAPE", f"{metrics['mape']:.1f}%")
-    c4.metric("Training rows", f"{metrics['n_train']:,}")
-    c5.metric("Test rows",     f"{metrics['n_test']:,}")
+    c3.metric("Training rows", f"{metrics['n_train']:,}")
+    c3.metric("Test rows",     f"{metrics['n_test']:,}")
 
     # ── 2. Historical stats ──────────────────────
     st.subheader("📈 Historical Price Summary")
